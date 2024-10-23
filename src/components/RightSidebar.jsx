@@ -153,7 +153,7 @@ const RightSidebar = () => {
                 }
               }}
             >
-              <span className="truncate">{item.title}</span>
+              <span className="truncate pointer-events-none">{item.title}</span>
               <input
                 type="checkbox"
                 name="task"

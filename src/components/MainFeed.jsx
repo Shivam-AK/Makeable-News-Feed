@@ -39,9 +39,19 @@ const MainFeed = () => {
                 className="object-cover w-16 h-16 overflow-hidden rounded-lg"
               />
               <div className="flex-1 ml-4">
-                <h2 className="text-lg font-semibold text-blue-600">
-                  {item.userName}
-                </h2>
+                <div className="flex justify-between mb:flex-col-reverse">
+                  <h2 className="text-lg font-semibold text-blue-600">
+                    {item.userName}
+                  </h2>
+                  <div className="space-x-2 text-right">
+                    <p className="inline-block text-sm text-gray-500">
+                      Edited 1 day ago
+                    </p>
+                    <a href="#">
+                      <Settings />
+                    </a>
+                  </div>
+                </div>
                 <p className="text-sm text-gray-500">
                   Activity happened on {item.activeDate}
                 </p>
@@ -65,14 +75,6 @@ const MainFeed = () => {
                     {item.link}
                   </a>
                 </div>
-              </div>
-              <div className="absolute top-0 right-0 space-x-3 text-right">
-                <p className="inline-block text-sm text-gray-500">
-                  Edited 1 day ago
-                </p>
-                <a href="#">
-                  <Settings />
-                </a>
               </div>
             </div>
 
